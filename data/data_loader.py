@@ -227,6 +227,7 @@ class Dataset_Custom(Dataset):
         cols = list(df_raw.columns); cols.remove(self.target)
         df_raw = df_raw[cols+[self.target]]
 
+        # Editted by Aisu: total length = 4320
         num_train = int(len(df_raw)*0.7)
         num_test = int(len(df_raw)*0.2)
         num_vali = len(df_raw) - num_train - num_test
